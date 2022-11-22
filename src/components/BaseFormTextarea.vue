@@ -1,0 +1,16 @@
+<!-- eslint-disable vuejs-accessibility/form-control-has-label -->
+<!-- eslint-disable max-len -->
+<!-- eslint-disable vue/max-len -->
+<template>
+  <BaseFormField :title="title" :error="error">
+    <textarea class="form__input form__input--area" v-model="dataValue" name="comments" :placeholder="placeholder"></textarea>
+  </BaseFormField>
+</template>
+
+<script>
+import formFieldMixin from '@/mixins/formFieldMixin';
+
+export default {
+  mixins: [formFieldMixin],
+};
+</script>

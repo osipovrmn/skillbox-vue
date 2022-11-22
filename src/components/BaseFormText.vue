@@ -1,0 +1,17 @@
+<!-- eslint-disable vuejs-accessibility/form-control-has-label -->
+<!-- eslint-disable max-len -->
+<!-- eslint-disable vue/max-len -->
+<template>
+  <BaseFormField :title="title" :error="error">
+    <input class="form__input" v-model="dataValue" :type="type" :name="name" :placeholder="placeholder">
+  </BaseFormField>
+</template>
+
+<script>
+import formFieldMixin from '@/mixins/formFieldMixin';
+
+export default {
+  props: ['type'],
+  mixins: [formFieldMixin],
+};
+</script>
